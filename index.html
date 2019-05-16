@@ -26,6 +26,17 @@
   <div class="p-2 bg-primary">Flex item 3</div>
 </div>
     
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    
     <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
